@@ -59,7 +59,7 @@ services:
       # a token from every visit, using status-only will enable api-secret based login.
       AUTH_DEFAULT_ROLES: denied
       BASE_URL: https://lfnt.atomspring.com/nightscout
-      PORT: 8888
+      PORT: 1001
       DBSIZE_ENABLE_ALERTS: true
       # For all other settings, please refer to the Environment section of the README
       # https://github.com/nightscout/cgm-remote-monitor#environment
