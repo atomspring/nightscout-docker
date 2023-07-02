@@ -14,7 +14,7 @@ RUN set -x && apk add --no-cache bash libgcc libstdc++ curl curl-dev coreutils c
 
 
 WORKDIR /app
-RUN git clone git://github.com/nightscout/cgm-remote-monitor.git /app
+RUN git clone https://github.com/nightscout/cgm-remote-monitor.git /app
 RUN cd /app &&  git checkout ${DEPLOY_HEAD-master} && npm install --cache /tmp/empty-cache && npm run postinstall && npm run env && rm -rf /tmp/* \.
 
 EXPOSE 1001
