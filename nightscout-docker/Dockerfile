@@ -3,8 +3,8 @@ FROM alpine:3.18
 LABEL Maintainer="atomspring"
 
 RUN set -x && apk add --no-cache bash libgcc libstdc++ curl curl-dev coreutils ca-certificates tzdata shadow libstdc++ logrotate py3-pip s6-overlay nodejs-current yarn\
-  && groupadd --system --gid 10000 node_app \
-  && useradd --system --gid node_app --no-create-home --home /nonexistent --comment "Node App User Acct." --shell /bin/false --uid 10000  node_app\
+  && groupadd --system --gid 999 node_app \
+  && useradd --system --gid node_app --no-create-home --home /nonexistent --comment "Node App User Acct." --shell /bin/false --uid 999 node_app\
   && mkdir -p /app /config /defaults \
   && pip3 install tzupdate \
   && apk del --purge \
