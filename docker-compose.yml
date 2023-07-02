@@ -10,7 +10,7 @@ networks:
           ip_range: 100.100.100.0/24
           gateway: 100.100.100.1
 
-Services:
+services:
   mongo:
     image: mongo:4.4
     volumes:
